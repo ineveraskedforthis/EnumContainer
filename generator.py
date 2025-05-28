@@ -39,10 +39,10 @@ def do_the_thing(input_file_path, output_file_path, container_header_name, outpu
         cpp_header += "#include \"unordered_dense.h\"\n"
         cpp_header += f"#include \"{output_file_path[:-4]}.hpp\"\n"
         cpp_header += f"namespace {object_name} {{\n"
-        cpp_header += "void load_data(dcon::data_container& state) {\n"
         for i in range(1, len(headers)):
             if headers[i].startswith("STRING"):
                 cpp_header += f"ankerl::unordered_dense::map<dcon::{object_name}_id::value_base_t, std::string> {headers[i][7:]} {{}};\n"
+        cpp_header += "void load_data(dcon::data_container& state) {\n"
         for i in range(1, len(lines)):
             data = lines[i].strip().split(",")
             cpp_header += "    {\n"
