@@ -32,7 +32,7 @@ static const dcon::skill_id magic = dcon::skill_id {26};
 static const dcon::skill_id alchemy = dcon::skill_id {27};
 static const dcon::skill_id enchanting = dcon::skill_id {28};
 static const dcon::skill_id battle_magic = dcon::skill_id {29};
-static ankerl::unordered_dense::map<dcon::skill_id::value_base_t, std::string> name;
+extern ankerl::unordered_dense::map<dcon::skill_id::value_base_t, std::string> name;
 void load_data(dcon::data_container& state);
 }
 

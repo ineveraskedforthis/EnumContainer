@@ -3,6 +3,7 @@
 #include "./test/skills.hpp"
 namespace skill {
 void load_data(dcon::data_container& state) {
+ankerl::unordered_dense::map<dcon::skill_id::value_base_t, std::string> name {};
     {
         auto id = state.create_skill();
         state.skill_set_strength_bonus(id, 1.00f);
