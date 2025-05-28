@@ -1,3 +1,4 @@
+#pragma once
 #include "objects.hpp"
 #include "unordered_dense.h"
 namespace skill {

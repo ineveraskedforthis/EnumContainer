@@ -14,8 +14,8 @@ def do_the_thing(input_file_path, output_file_path, container_header_name):
     headers = lines[0].strip().split(",")
 
     object_name = headers[0]
-
-    cpp_header = "#include \"" + container_header_name + "\"\n"
+    cpp_header = "#pragma once\n"
+    cpp_header += "#include \"" + container_header_name + "\"\n"
     cpp_header += "#include \"unordered_dense.h\"\n"
 
     cpp_header += f"namespace {object_name} {{\n"
